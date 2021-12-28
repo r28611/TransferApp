@@ -87,13 +87,26 @@
                                     <action selector="saveDataWithProperty:" destination="jeq-OR-pNj" eventType="touchUpInside" id="umO-no-Gza"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I00-BG-fZE">
+                                <rect key="frame" x="30" y="560.5" width="354" height="35.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью unwind">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="chk-eh-IjO" kind="unwind" identifier="toFirstScreen" unwindAction="unwindToFirstScreen:" id="Xek-dv-2s7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RcW-iO-oSC"/>
                         <color key="backgroundColor" red="0.65117938919999996" green="0.94509803920000002" blue="0.44455597920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="l7m-Qf-u9L" secondAttribute="trailing" constant="30" id="2Tl-0q-5kq"/>
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="centerX" secondItem="Uzg-R5-8ny" secondAttribute="centerX" id="5pe-0J-21E"/>
+                            <constraint firstItem="I00-BG-fZE" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="60Q-Lb-rPr"/>
+                            <constraint firstItem="I00-BG-fZE" firstAttribute="top" secondItem="lc3-oX-iPP" secondAttribute="bottom" constant="30" id="9SS-zs-nqT"/>
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="centerY" secondItem="Uzg-R5-8ny" secondAttribute="centerY" id="B1I-CZ-VaJ"/>
+                            <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="I00-BG-fZE" secondAttribute="trailing" constant="30" id="BV1-vq-eiH"/>
                             <constraint firstItem="lc3-oX-iPP" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="STv-Qv-raw"/>
                             <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="lc3-oX-iPP" secondAttribute="trailing" constant="30" id="cJh-Yt-y5n"/>
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="uPl-Ax-ne2"/>
@@ -106,6 +119,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEc-87-TEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="chk-eh-IjO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1755" y="98"/>
         </scene>

@@ -27,6 +27,9 @@ class ViewController: UIViewController, UpdatableDataController {
         editScreen.updatingData = dataLabel.text ?? ""
         self.navigationController?.pushViewController(editScreen as! UIViewController, animated: true)
     }
+    
+    @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
             case "toEditScreen":
