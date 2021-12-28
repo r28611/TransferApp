@@ -21,11 +21,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lX-W3-Qs5">
+                                <rect key="frame" x="30" y="496" width="354" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью свойства">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMU-JL-EW5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.58039215690000001" green="0.54901960780000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0lX-W3-Qs5" secondAttribute="trailing" constant="30" id="236-eC-aQ2"/>
+                            <constraint firstItem="0lX-W3-Qs5" firstAttribute="top" secondItem="3zO-vn-W9D" secondAttribute="bottom" constant="30" id="6ac-Vd-Bs2"/>
                             <constraint firstItem="3zO-vn-W9D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J1O-6h-l89"/>
+                            <constraint firstItem="0lX-W3-Qs5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="LYz-JD-wUP"/>
                             <constraint firstItem="3zO-vn-W9D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jea-cD-WzM"/>
                         </constraints>
                     </view>
