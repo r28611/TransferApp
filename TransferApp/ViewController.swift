@@ -11,7 +11,7 @@ protocol UpdatableDataController: AnyObject {
     var updatedData: String { get set }
 }
 
-class ViewController: UIViewController, UpdatableDataController {
+class ViewController: UIViewController, UpdatableDataController, DataUpdateProtocol {
 
     @IBOutlet weak var dataLabel: UILabel!
     var updatedData: String = "Test data"
@@ -30,6 +30,14 @@ class ViewController: UIViewController, UpdatableDataController {
     
     @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
     
+    @IBAction func editDataWithDelegate(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        editScreen.updatingData = dataLabel.text ?? ""
+        editScreen.handleUpdatedDataDelegate = self
+        
+        self.navigationController?.pushViewController(editScreen, animated: true)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
             case "toEditScreen":
@@ -45,6 +53,9 @@ class ViewController: UIViewController, UpdatableDataController {
         guard let destinationController = segue.destination as? SecondViewController else { return }
         destinationController.updatingData = dataLabel.text ?? ""
     }
-    
+    func onDataUpdate(data: String) {
+        updatedData = data
+        updateLabel(withText: data)
+    }
 }
 

@@ -14,6 +14,7 @@
 		AB8E663A277A84A6000200E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8E6639277A84A6000200E9 /* Assets.xcassets */; };
 		AB8E663D277A84A6000200E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8E663B277A84A6000200E9 /* LaunchScreen.storyboard */; };
 		AB8E6645277A87C6000200E9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8E6644277A87C6000200E9 /* SecondViewController.swift */; };
+		AB8E6647277BA4A2000200E9 /* DataUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8E6646277BA4A2000200E9 /* DataUpdate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AB8E663C277A84A6000200E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB8E663E277A84A7000200E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB8E6644277A87C6000200E9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		AB8E6646277BA4A2000200E9 /* DataUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUpdate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AB8E6634277A84A3000200E9 /* ViewController.swift */,
 				AB8E6636277A84A3000200E9 /* Main.storyboard */,
 				AB8E6644277A87C6000200E9 /* SecondViewController.swift */,
+				AB8E6646277BA4A2000200E9 /* DataUpdate.swift */,
 				AB8E6639277A84A6000200E9 /* Assets.xcassets */,
 				AB8E663B277A84A6000200E9 /* LaunchScreen.storyboard */,
 				AB8E663E277A84A7000200E9 /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				AB8E6645277A87C6000200E9 /* SecondViewController.swift in Sources */,
 				AB8E6635277A84A3000200E9 /* ViewController.swift in Sources */,
+				AB8E6647277BA4A2000200E9 /* DataUpdate.swift in Sources */,
 				AB8E6631277A84A3000200E9 /* AppDelegate.swift in Sources */,
 				AB8E6633277A84A3000200E9 /* SceneDelegate.swift in Sources */,
 			);

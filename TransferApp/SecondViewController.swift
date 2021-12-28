@@ -12,12 +12,12 @@ protocol UpdatingDataController: AnyObject {
 }
 
 class SecondViewController: UIViewController, UpdatingDataController {
-
+    var handleUpdatedDataDelegate: DataUpdateProtocol?
     @IBOutlet weak var dataTextField: UITextField!
     var updatingData: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -29,6 +29,11 @@ class SecondViewController: UIViewController, UpdatingDataController {
         self.navigationController?.viewControllers.forEach { viewController in
             (viewController as? UpdatableDataController)?.updatedData = dataTextField.text ?? ""
         }
+    }
+    @IBAction func saveDataWithaveDataWithDelegate(_ sender: Any) {
+        let updatedData = dataTextField.text ?? ""
+        handleUpdatedDataDelegate?.onDataUpdate(data: updatedData)
+        navigationController?.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
