@@ -12,6 +12,7 @@ protocol UpdatingDataController: AnyObject {
 }
 
 class SecondViewController: UIViewController, UpdatingDataController {
+    var completionHandler: ((String) -> Void)?
     var handleUpdatedDataDelegate: DataUpdateProtocol?
     @IBOutlet weak var dataTextField: UITextField!
     var updatingData: String = ""
@@ -33,6 +34,11 @@ class SecondViewController: UIViewController, UpdatingDataController {
     @IBAction func saveDataWithaveDataWithDelegate(_ sender: Any) {
         let updatedData = dataTextField.text ?? ""
         handleUpdatedDataDelegate?.onDataUpdate(data: updatedData)
+        navigationController?.popViewController(animated: true)
+    }
+    @IBAction func saveDataWithClosure(_ sender: Any) {
+        let updatedData = dataTextField.text ?? ""
+        completionHandler?(updatedData)
         navigationController?.popViewController(animated: true)
     }
     

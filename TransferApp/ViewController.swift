@@ -38,6 +38,17 @@ class ViewController: UIViewController, UpdatableDataController, DataUpdateProto
         
         self.navigationController?.pushViewController(editScreen, animated: true)
     }
+    @IBAction func editDataWithСlosure(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        editScreen.updatingData = dataLabel.text ?? ""
+        editScreen.completionHandler = { [unowned self] updatedValue in
+            updatedData = updatedValue
+            updateLabel(withText: updatedValue)
+        }
+
+        self.navigationController?.pushViewController(editScreen, animated: true)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
             case "toEditScreen":

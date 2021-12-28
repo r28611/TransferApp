@@ -51,6 +51,16 @@
                                     <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hyb-zl-bmh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TH1-wn-cGh">
+                                <rect key="frame" x="30" y="700" width="354" height="35.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью замыкания">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editDataWithСlosure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JeN-DQ-L2L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.58039215690000001" green="0.54901960780000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,6 +75,9 @@
                             <constraint firstItem="3zO-vn-W9D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J1O-6h-l89"/>
                             <constraint firstItem="0lX-W3-Qs5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="LYz-JD-wUP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I13-3a-n5D" secondAttribute="trailing" constant="30" id="Pw1-yq-pgl"/>
+                            <constraint firstItem="TH1-wn-cGh" firstAttribute="top" secondItem="I13-3a-n5D" secondAttribute="bottom" constant="30" id="QUV-rE-gdS"/>
+                            <constraint firstItem="TH1-wn-cGh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="YWE-ub-jrD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TH1-wn-cGh" secondAttribute="trailing" constant="30" id="hdm-5c-pBz"/>
                             <constraint firstItem="3zO-vn-W9D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jea-cD-WzM"/>
                         </constraints>
                     </view>
@@ -120,11 +133,22 @@
                                     <action selector="saveDataWithaveDataWithDelegate:" destination="jeq-OR-pNj" eventType="touchUpInside" id="VZb-6r-GAy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-OM-qPh">
+                                <rect key="frame" x="30" y="691.5" width="354" height="35.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью замыкания">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveDataWithClosure:" destination="jeq-OR-pNj" eventType="touchUpInside" id="q97-yt-KU2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RcW-iO-oSC"/>
                         <color key="backgroundColor" red="0.65117938919999996" green="0.94509803920000002" blue="0.44455597920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="l7m-Qf-u9L" secondAttribute="trailing" constant="30" id="2Tl-0q-5kq"/>
+                            <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="j5r-OM-qPh" secondAttribute="trailing" constant="30" id="3Fl-P0-0An"/>
                             <constraint firstItem="UOs-OC-jeP" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="4QB-hS-u1S"/>
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="centerX" secondItem="Uzg-R5-8ny" secondAttribute="centerX" id="5pe-0J-21E"/>
                             <constraint firstItem="I00-BG-fZE" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="60Q-Lb-rPr"/>
@@ -132,9 +156,11 @@
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="centerY" secondItem="Uzg-R5-8ny" secondAttribute="centerY" id="B1I-CZ-VaJ"/>
                             <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="I00-BG-fZE" secondAttribute="trailing" constant="30" id="BV1-vq-eiH"/>
                             <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="UOs-OC-jeP" secondAttribute="trailing" constant="30" id="CqT-KU-dp4"/>
+                            <constraint firstItem="j5r-OM-qPh" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="KQe-Ta-de5"/>
                             <constraint firstItem="lc3-oX-iPP" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="STv-Qv-raw"/>
                             <constraint firstItem="UOs-OC-jeP" firstAttribute="top" secondItem="I00-BG-fZE" secondAttribute="bottom" constant="30" id="V6p-vL-NaQ"/>
                             <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="lc3-oX-iPP" secondAttribute="trailing" constant="30" id="cJh-Yt-y5n"/>
+                            <constraint firstItem="j5r-OM-qPh" firstAttribute="top" secondItem="UOs-OC-jeP" secondAttribute="bottom" constant="30" id="sYb-JT-BGJ"/>
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="uPl-Ax-ne2"/>
                             <constraint firstItem="lc3-oX-iPP" firstAttribute="top" secondItem="l7m-Qf-u9L" secondAttribute="bottom" constant="30" id="yuT-zv-57g"/>
                         </constraints>
