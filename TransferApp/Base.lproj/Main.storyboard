@@ -64,6 +64,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc3-oX-iPP">
+                                <rect key="frame" x="30" y="495" width="354" height="35.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью свойства" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveDataWithProperty:" destination="jeq-OR-pNj" eventType="touchUpInside" id="umO-no-Gza"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RcW-iO-oSC"/>
                         <color key="backgroundColor" red="0.65117938919999996" green="0.94509803920000002" blue="0.44455597920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,7 +81,10 @@
                             <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="l7m-Qf-u9L" secondAttribute="trailing" constant="30" id="2Tl-0q-5kq"/>
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="centerX" secondItem="Uzg-R5-8ny" secondAttribute="centerX" id="5pe-0J-21E"/>
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="centerY" secondItem="Uzg-R5-8ny" secondAttribute="centerY" id="B1I-CZ-VaJ"/>
+                            <constraint firstItem="lc3-oX-iPP" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="STv-Qv-raw"/>
+                            <constraint firstItem="RcW-iO-oSC" firstAttribute="trailing" secondItem="lc3-oX-iPP" secondAttribute="trailing" constant="30" id="cJh-Yt-y5n"/>
                             <constraint firstItem="l7m-Qf-u9L" firstAttribute="leading" secondItem="RcW-iO-oSC" secondAttribute="leading" constant="30" id="uPl-Ax-ne2"/>
+                            <constraint firstItem="lc3-oX-iPP" firstAttribute="top" secondItem="l7m-Qf-u9L" secondAttribute="bottom" constant="30" id="yuT-zv-57g"/>
                         </constraints>
                     </view>
                     <connections>

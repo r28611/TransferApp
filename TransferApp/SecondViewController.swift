@@ -25,7 +25,12 @@ class SecondViewController: UIViewController, UpdatingDataController {
         super.viewWillAppear(animated)
         updateTextFieldData(withText: updatingData)
     }
-
+    @IBAction func saveDataWithProperty(_ sender: Any) {
+        self.navigationController?.viewControllers.forEach { viewController in
+            (viewController as? UpdatableDataController)?.updatedData = dataTextField.text ?? ""
+        }
+    }
+    
     private func updateTextFieldData(withText text: String) {
         dataTextField.text = text
     }

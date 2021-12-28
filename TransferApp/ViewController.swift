@@ -7,12 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol UpdatableDataController: AnyObject {
+    var updatedData: String { get set }
+}
+
+class ViewController: UIViewController, UpdatableDataController {
 
     @IBOutlet weak var dataLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    var updatedData: String = "Test data"
+   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateLabel(withText: updatedData)
     }
 
     @IBAction func editDataWithProperty(_ sender: Any) {
@@ -20,6 +26,10 @@ class ViewController: UIViewController {
         let editScreen = storyboard.instantiateViewController(withIdentifier:"SecondViewController") as! UpdatingDataController
         editScreen.updatingData = dataLabel.text ?? ""
         self.navigationController?.pushViewController(editScreen as! UIViewController, animated: true)
+    }
+    
+    private func updateLabel(withText text: String) {
+        dataLabel.text = updatedData
     }
     
 }
