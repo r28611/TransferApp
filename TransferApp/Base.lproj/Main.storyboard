@@ -31,12 +31,25 @@
                                     <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMU-JL-EW5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Beu-0a-AUf">
+                                <rect key="frame" x="30" y="564" width="354" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью segue">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="jeq-OR-pNj" kind="show" identifier="toEditScreen" id="CHT-G6-9ti"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.58039215690000001" green="0.54901960780000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0lX-W3-Qs5" secondAttribute="trailing" constant="30" id="236-eC-aQ2"/>
+                            <constraint firstItem="Beu-0a-AUf" firstAttribute="top" secondItem="0lX-W3-Qs5" secondAttribute="bottom" constant="30" id="5EB-b6-eXa"/>
                             <constraint firstItem="0lX-W3-Qs5" firstAttribute="top" secondItem="3zO-vn-W9D" secondAttribute="bottom" constant="30" id="6ac-Vd-Bs2"/>
+                            <constraint firstItem="Beu-0a-AUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Dzo-xS-0M4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Beu-0a-AUf" secondAttribute="trailing" constant="30" id="HcZ-nB-Lq5"/>
                             <constraint firstItem="3zO-vn-W9D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J1O-6h-l89"/>
                             <constraint firstItem="0lX-W3-Qs5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="LYz-JD-wUP"/>
                             <constraint firstItem="3zO-vn-W9D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jea-cD-WzM"/>
@@ -51,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Сцена Б-->
         <scene sceneID="6Vh-MI-Z5P">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="jeq-OR-pNj" customClass="SecondViewController" customModule="TransferApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,6 +100,7 @@
                             <constraint firstItem="lc3-oX-iPP" firstAttribute="top" secondItem="l7m-Qf-u9L" secondAttribute="bottom" constant="30" id="yuT-zv-57g"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Сцена Б" id="bAA-yf-sB0"/>
                     <connections>
                         <outlet property="dataTextField" destination="l7m-Qf-u9L" id="Dn1-Yy-6M3"/>
                     </connections>

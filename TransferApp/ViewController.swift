@@ -27,9 +27,20 @@ class ViewController: UIViewController, UpdatableDataController {
         editScreen.updatingData = dataLabel.text ?? ""
         self.navigationController?.pushViewController(editScreen as! UIViewController, animated: true)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "toEditScreen":
+            prepareEditScreen(segue)
+        default:
+            break
+        }
+    }
     private func updateLabel(withText text: String) {
         dataLabel.text = updatedData
+    }
+    private func prepareEditScreen(_ segue: UIStoryboardSegue) {
+        guard let destinationController = segue.destination as? SecondViewController else { return }
+        destinationController.updatingData = dataLabel.text ?? ""
     }
     
 }
